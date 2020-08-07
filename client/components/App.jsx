@@ -1,22 +1,16 @@
-import React from 'react'
-import { HashRouter as Router, Route } from 'react-router-dom'
+import React, { Component } from 'react'
 
-// import TopPanel from './TopPanel'
-import Start from './Start'
-import Login from './Login'
-import SignUp from './Signup'
+import Header from './Header'
+import Bookpage from './Bookpage'
 
-const App = () => {
-  return (
-    <>
-      <h1>League-ify</h1>
-      <Router>
-        <Route exact path="/" component={Start} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={SignUp} />
-      </Router>
-    </>
-  )
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Bookpage />
+      </div>
+    )
+  }
 }
-
 export default App
