@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom'
 const Start = () => {
   return (
     <>
-      <div className="start">START YOUR</div>
-      <div>OWN LEAGUE</div>
+      <div className="start">Track Your Books!</div>
       <Link to="/login">
-        <div>NOW</div>
+        <div>Login</div>
       </Link>
+      <div>
+        <h3>Don't have an account?</h3>
+        <Link to="/signup">Sign Up</Link>
+      </div>
     </>
   )
 }
