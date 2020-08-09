@@ -37,14 +37,10 @@ class Bookpage extends Component {
             else if(book.volumeInfo.hasOwnProperty('imageLinks') === false) {
                 book.volumeInfo['imageLinks'] = { thumbnail: "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" }
            return book
-        })
-        
+        }
         return cleanData
-        
-    }
-
-
-
+    })
+}
     render() {
         return (
             <div>
