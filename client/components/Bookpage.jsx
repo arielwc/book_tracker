@@ -19,8 +19,7 @@ class Bookpage extends Component {
             .get("https://www.googleapis.com/books/v1/volumes")
             .query({ q: this.state.searchEntry })
             .then((bookData) => {
-                const cleanData = this.cleanData(bookData)
-                this.setState({ books: cleanData })
+                this.setState({ books: [...bookData.body.items] })
             })
     }
 
@@ -28,19 +27,19 @@ class Bookpage extends Component {
         this.setState({ searchEntry: e.target.value })
     }
 
-    cleanData = (bookData) => {
-        const cleanData = bookData.body.items.map((book) => {
-            if (book.volumeInfo.hasOwnProperty('publishedDate') === false) {
-                book.volumeInfo['publishedDate'] = '0000'
-            }
+//     cleanData = (bookData) => {
+//         const cleanData = bookData.body.items.map((book) => {
+//             if (book.volumeInfo.hasOwnProperty('publishedDate') === false) {
+//                 book.volumeInfo['publishedDate'] = '0000'
+//             }
 
-            else if(book.volumeInfo.hasOwnProperty('imageLinks') === false) {
-                book.volumeInfo['imageLinks'] = { thumbnail: "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" }
-           return book
-        }
-        return cleanData
-    })
-}
+//             else if(book.volumeInfo.hasOwnProperty('imageLinks') === false) {
+//                 book.volumeInfo['imageLinks'] = { thumbnail: "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" }
+//            return book
+//         }
+//         return cleanData
+//     })
+// }
     render() {
         return (
             <div>
