@@ -3,6 +3,7 @@ import request from "superagent";
 
 import Search from "./Search";
 import SearchResults from "./SearchResults";
+import MyFavouritesList from "./MyFavouritesList";
 
 class Bookpage extends Component {
   constructor(props) {
