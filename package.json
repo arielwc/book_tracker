@@ -34,9 +34,11 @@
   "dependencies": {
     "elliptic": "^6.5.3",
     "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "nedb": "^1.8.0",
     "npm-run-all": "^4.1.5",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^3.4.2",
     "superagent": "^5.2.2"
   },
   "devDependencies": {

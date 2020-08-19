@@ -9,6 +9,7 @@ const SearchResult = (props) => {
                 <h3>Author: {props.author}</h3>
                 <p>Published Date: {props.published === '0000' ? 'Not available' : props.published.substring(0, 4)}</p>
             </div>
+            <button className="addBook" type="submit" onClick="">Add to Book List</button>
         </div>
     );
 }
