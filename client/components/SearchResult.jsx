@@ -1,16 +1,21 @@
-import React from 'react';
+import React from "react";
 
 const SearchResult = (props) => {
-    return (
-        <div className="searchResultContainer">
-            <img src={props.image} alt=""/>
-            <div className="description">
-                <h2>{props.title}</h2>
-                <h3>Author: {props.author}</h3>
-                <p>Published Date: {props.published === '0000' ? 'Not available' : props.published.substring(0, 4)}</p>
-            </div>
-        </div>
-    );
-}
+  return (
+    <div className="searchResultContainer">
+      <div className="description">
+        <img src={props.image} alt="" />
+        <h2>{props.title}</h2>
+        <h3>Author: {props.author}</h3>
+        <p>
+          Published Date:{" "}
+          {props.published === "0000"
+            ? "Not available"
+            : props.published.substring(0, 4)}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default SearchResult;
